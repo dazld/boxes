@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "beefy index.js:build.js --open --live -- -d",
+    "pages": "browserify index.js -o build.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^6.2.0",
     "canvas-fit": "^1.2.0",
     "canvas-orbit-camera": "^1.0.1",
     "gl-context": "^0.1.1",
