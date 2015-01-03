@@ -3,4 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body, html {
+    background: rgba(15,45,65,1);
+}
